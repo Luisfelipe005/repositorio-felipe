@@ -62,13 +62,13 @@ public class Cliente {
         this.livro = livro;
     }
     public void imprimiinfo(){
-        System.out.println("---imformaões do cliente---");
-        System.out.println("nome: " + this.nome);
-        System.out.println("idade: " + this.idade);
-        System.out.println("sexo: " + this.sexo);
-        System.out.println("email: " + this.email);
-        System.out.println("senha: " + this.senha);
-        //System.out.println("livro: " + this.livro);
+        System.out.println("---Imformações Do Cliente---");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+        System.out.println("Sexo: " + this.sexo);
+        System.out.println("Email: " + this.email);
+        System.out.println("Senha: " + this.senha);
+        System.out.println("Livro: " + this.livro);
     }
     @Override
     public String toString(){

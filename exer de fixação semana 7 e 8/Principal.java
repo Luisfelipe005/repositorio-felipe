@@ -5,13 +5,13 @@ public class Principal {
     Livro l1 = new Livro("homem aranha ", "peter parker", 2000, 200.5, 40);
     Livro l2 = new Livro("homem aranha ", "peter parker", 2000, 200.5, 40);
     Livro l3 = new Livro("homem aranha ", "peter parker", 2000, 200.5, 40); 
-    Cliente c1 = new Cliente("LIPE", 1, "masc", "dsdsdsd", " asasa",l1);
-    Cliente c2 = new Cliente("lipe", 2, "masc", "dsdsdsd", " asasa",l1);
-    Cliente c3 = new Cliente("lipe", 2, "masc", "dsdsdsd", " asasa",l1);
+    Cliente c1 = new Cliente("", 1, "", "", "",l1);
+    Cliente c2 = new Cliente("", 2, "", "", "",l1);
+    Cliente c3 = new Cliente("", 2, "", "", "",l1);
     int i = 1;
     while(i< 4){
         System.out.println("---INFORMAÇÕES DO CLIENTE---");
-        System.out.println("digite seu nome: ");
+        System.out.print("digite seu nome: ");
         String nome = scanner.nextLine();
         System.out.print("digite sua idade: ");
         int idade = scanner.nextInt(); scanner.nextLine();
@@ -32,7 +32,7 @@ public class Principal {
         double preco = scanner.nextDouble(); scanner.nextLine();
         System.out.print("qual a quantidade de página: ");
         int quantpagina = scanner.nextInt(); scanner.nextLine();
-         switch(i){
+          switch(i){
           case 1:
            c1.setidade(idade); c1.setnome(nome); c1.setsexo(sexo); c1.setemail(email); c1.setsenha(senha);
            l1.settitulo(titulo); l1.setautor(autor); l1.setanodepublicacao(anodepublicacao); l1.setquantpagina(quantpagina); l1.setpreco(preco);
@@ -49,14 +49,19 @@ public class Principal {
             i+=1;
             break;
           }
-    }
     
-    System.out.println("o cliente" + c1.getnome() + ", esta com o livro "+ l1.gettitulo() + ", e o preço por página dele é " + l1.calcularprecoporpagina());
-    System.out.println("o cliente" + c2.getnome() + ", esta com o livro "+ l2.gettitulo() + ", e o preço por página dele é " + l2.calcularprecoporpagina());
-    System.out.println("o cliente" + c3.getnome() + ", esta com o livro "+ l3.gettitulo() + ", e o preço por página dele é " + l3.calcularprecoporpagina());
-    
+    System.out.println("");
+    System.out.println("O Cliente " + c1.getnome() + ", Está Com O Livro "+ l1.gettitulo() + ", E O Preço Por Página Dele É " + l1.calcularprecoporpagina());
+    System.out.println("O Cliente " + c2.getnome() + ", Está Com O Livro "+ l2.gettitulo() + ", E O Preço Por Página Dele É " + l2.calcularprecoporpagina());
+    System.out.println("O Cliente " + c3.getnome() + ", Está Com O Livro "+ l3.gettitulo() + ", E O Preço Por Página Dele É " + l3.calcularprecoporpagina());
+    scanner.close();
+    System.out.println("");
+    c1.imprimiinfo();
+    c2.imprimiinfo();
+    c3.imprimiinfo();
 }
-} 
+    }
+  }
 //Crie uma classe chamada Principal. Nela, coloque o método main.
 //• No main, crie 3 instâncias de Cliente. Todas as informações necessárias para a criação
 //dos objetos devem ser solicitadas pelo Teclado. Obs.: para todos os clientes deve ser
