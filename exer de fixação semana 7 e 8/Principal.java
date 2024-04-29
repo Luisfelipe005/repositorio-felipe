@@ -32,20 +32,22 @@ public class Principal {
         double preco = scanner.nextDouble(); scanner.nextLine();
         System.out.print("qual a quantidade de página: ");
         int quantpagina = scanner.nextInt();
-          if(i==1){
+         switch(i){
+          case 1:
            c1.setidade(idade); c1.setnome(nome); c1.setsexo(sexo); c1.setemail(email); c1.setsenha(senha);
            l1.settitulo(titulo); l1.setautor(autor); l1.setanodepublicacao(anodepublicacao); l1.setquantpagina(quantpagina); l1.setpreco(preco);
-           i+=1;
-           }
-          else if(i==2){
+           i+=1; 
+           continue;
+          case 2:
             c2.setidade(idade); c2.setnome(nome); c2.setsexo(sexo); c2.setemail(email); c2.setsenha(senha);
             l2.settitulo(titulo); l2.setautor(autor); l2.setanodepublicacao(anodepublicacao); l2.setquantpagina(quantpagina); l2.setpreco(preco);
             i+=1;
-           } 
-          else if(i==3){
+           continue;
+          case 3:
             c3.setidade(idade); c3.setnome(nome); c3.setsexo(sexo); c3.setemail(email); c3.setsenha(senha);
             l3.settitulo(titulo); l3.setautor(autor); l3.setanodepublicacao(anodepublicacao); l3.setquantpagina(quantpagina); l3.setpreco(preco);
             i+=1;
+            break;
           }
     }
     
