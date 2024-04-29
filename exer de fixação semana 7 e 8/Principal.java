@@ -31,7 +31,7 @@ public class Principal {
         System.out.print("digite o preço: ");
         double preco = scanner.nextDouble(); scanner.nextLine();
         System.out.print("qual a quantidade de página: ");
-        int quantpagina = scanner.nextInt();
+        int quantpagina = scanner.nextInt(); scanner.nextLine();
          switch(i){
           case 1:
            c1.setidade(idade); c1.setnome(nome); c1.setsexo(sexo); c1.setemail(email); c1.setsenha(senha);
