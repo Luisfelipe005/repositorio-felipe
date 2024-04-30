@@ -25,6 +25,7 @@ public class Teste {
              continue;
             case 2:
              funcionario1.setnome(nome); funcionario1.setsexo(sexo); funcionario1.setendereco(endereco); 
+             c2.setcor(cor);
              i+=1;
              break;
             }

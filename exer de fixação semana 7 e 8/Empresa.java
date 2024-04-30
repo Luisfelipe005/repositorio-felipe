@@ -38,8 +38,20 @@ public class Empresa {
     }
     public void imprimeInfo(){
         System.out.println("Nome: " + getnome());
-        System.out.println("Funcionário 1: " + getfuncionario1());
-        System.out.println("Funcionário 2: " + getfuncionario2());
+        System.out.println("---INFO DO FUNCIONARIO--- ");
+        System.out.println("Nome: " + this.funcionario1.getnome());
+        System.out.println("Endereço: " + this.funcionario1.getendereco());
+        System.out.println("Sexo: "+ this.funcionario1.getsexo());
+        System.out.println("---INFO DO FUNCIONARIO--- ");
+        System.out.println("Nome: " + this.funcionario2.getnome());
+        System.out.println("Endereço: " + this.funcionario2.getendereco());
+        System.out.println("Sexo: "+ this.funcionario2.getsexo());
+    }
+    public static void main(String[] args){
+        FuncionarioCaixa f1 = new FuncionarioCaixa(new Calculadora("azul"), "lipe", "assa", "m");
+        FuncionarioCaixa f2 = new FuncionarioCaixa(new Calculadora("roxo"), "nay", "baba", "f");
+        Empresa e1 = new Empresa("nike", f1, f2);
+        e1.imprimeInfo();
     }
 }
 //- Uma empresa tem um nome e dois funcionários do caixa;

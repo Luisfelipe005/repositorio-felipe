@@ -59,12 +59,17 @@ public class FuncionarioCaixa {
          calculadora.elevaAoQuadrado(valor);
      }
      public void imprimeInfo(){
-        System.out.println("Nome: " + getnome());
-        System.out.println("Endereço: " + getendereco());
-        System.out.println("Sexo: " + getsexo());
-        calculadora.imprimeInfo();
+        System.out.println("---INFO DA CLASSE---");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Endereço: " + this.endereco);
+        System.out.println("Sexo: " + this.sexo);
+        System.out.println("Memória: " + this.calculadora.getmemoria());
+        System.out.println("Cor: "+ this.calculadora.getcor());
      }
      public static void main(String[] args){
+        Calculadora c2 = new Calculadora("preto");
+        FuncionarioCaixa f2 = new FuncionarioCaixa(c2, "l", "sd", "m");
+        f2.imprimeInfo();
         Calculadora c1 = new Calculadora("azul");
         FuncionarioCaixa f1 = new FuncionarioCaixa(c1, "lipe", "sdsad", "m");
         f1.imprimeInfo();
