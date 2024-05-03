@@ -81,14 +81,9 @@ public class Data {
         else {
             return false;
         }
-      //if((getano() % 4 == 0)|| getano() % 100 != 0 && getano() % 400 == 0 ){
-        //  return true;
-        //}
-      //else
-        //return false;
     }
 
-    
+    //TESTE
     public static void main(String[] args) {
     Data data = new Data(29, 2, 1988);
     System.out.println(data.verificaAnoBissexto());
