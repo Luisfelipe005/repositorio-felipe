@@ -1,27 +1,56 @@
+import java.time.Year;
 public class Data {
     private int dia;
     private int mes;
     private int ano;
 
     public Data(int dia, int mes, int ano){
-        if(dia<=0 || dia>=32 && mes<=0 || mes >=13){
+        if((dia<=0 || dia>=32) || (mes<=0 || mes >=13)){
            System.out.println("ERRO!");
            this.dia = dia;
            this.mes = mes;
            this.ano = ano;
            setano(2000); setmes(1); setdia(1);
         }
-        if((ano % 4 == 0 && ano % 100 !=0) || ano % 400 == 0){
-            if(mes==2){
-                if(dia >= 1 || dia <=29){
+        else if(Year.isLeap(ano)){
+            if((dia >= 1 || dia <=29) && mes==2){
                     this.dia = dia;
                     this.mes = mes;
                     this.ano = ano;
                     setano(ano); setmes(mes); setdia(dia);
-              }
+              
             }
-           }
-            
+            else{
+                this.dia = dia;
+                this.mes = mes;
+                this.ano = ano;
+                setano(ano); setmes(mes); setdia(dia);
+            }
+        }
+        else if(((dia>=1 || dia<=31) && (mes>=1 || mes <=12))){ 
+            if(dia== 29 && mes == 2 ){
+                System.out.println("ERRO!");
+                this.dia = dia;
+                this.mes = mes;
+                this.ano = ano;
+                setano(2000); setmes(1); setdia(1);
+            }
+            else{
+                this.dia = dia;
+                this.mes = mes;
+                this.ano = ano;
+                setano(ano); setmes(mes); setdia(dia);
+               
+                }
+        }
+        else{ 
+            System.out.println("ERRO!");
+            this.dia = dia;
+            this.mes = mes;
+            this.ano = ano;
+            setano(2000); setmes(1); setdia(1); 
+        }
+    
     }
     public int getdia(){
         return this.dia;
@@ -45,15 +74,23 @@ public class Data {
     public String toString(){
         return getdia() + "/" + getmes() + "/" + getano(); 
     }
-    public boolean verificaAnoBissexto(){
-      if((getano() % 4 == 0 && getano() % 100 != 0) || getano() % 400 == 0 ){
-          return true;
+    private boolean verificaAnoBissexto(){
+        if(Year.of(getano()).isLeap()){
+            return true;
         }
-      else
-        return false;
+        else {
+            return false;
+        }
+      //if((getano() % 4 == 0)|| getano() % 100 != 0 && getano() % 400 == 0 ){
+        //  return true;
+        //}
+      //else
+        //return false;
     }
+
+    
     public static void main(String[] args) {
-    Data data = new Data(29, 2, 1900);
+    Data data = new Data(29, 2, 1988);
     System.out.println(data.verificaAnoBissexto());
     }
 }
