@@ -1,0 +1,18 @@
+{
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "name": "Esteio",
+  "sys": {
+    "type": 2,
+    "id": 2001569,
+    "country": "BR",
+    "sunrise": 1741339207,
+    "sunset": 1741384293
+  }
+}
